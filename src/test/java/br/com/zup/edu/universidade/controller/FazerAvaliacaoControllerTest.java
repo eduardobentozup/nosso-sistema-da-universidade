@@ -5,7 +5,6 @@ import br.com.zup.edu.universidade.controller.request.RespostaQuestaoRequest;
 import br.com.zup.edu.universidade.model.Aluno;
 import br.com.zup.edu.universidade.model.Avaliacao;
 import br.com.zup.edu.universidade.model.Questao;
-import br.com.zup.edu.universidade.model.RespostaAvaliacao;
 import br.com.zup.edu.universidade.repository.AlunoRepository;
 import br.com.zup.edu.universidade.repository.AvaliacaoRepository;
 import br.com.zup.edu.universidade.repository.QuestaoRepository;
@@ -15,7 +14,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.TypeFactory;
 import org.assertj.core.util.Sets;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -30,13 +28,12 @@ import org.springframework.web.server.ResponseStatusException;
 import java.math.BigDecimal;
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
-import java.util.Arrays;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest
